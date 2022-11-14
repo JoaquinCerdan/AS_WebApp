@@ -1,42 +1,48 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'post',
+    component: () => import(/* webpackChunkName: "about" */ '../views/PostView.vue')
+  },
+  {
+    path: '/project',
+    name: 'project',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ProjectView.vue')
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ContactView.vue')
   },
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
-    path: '/first',
-    name: 'first',
-    component: () => import(/* webpackChunkName: "about" */ '../views/FirstView.vue')
+    path: '/admin',
+    name: 'adminPost',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AdminPost.vue')
   },
   {
-    path: '/second',
-    name: 'second',
-    component: () => import(/* webpackChunkName: "about" */ '../views/SecondView.vue')
+    path: '/adminProject',
+    name: 'adminProject',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AdminProject.vue')
   },
   {
-    path: '/third',
-    name: 'third',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ThirdView.vue')
+    path: '/adminContact',
+    name: 'adminContact',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AdminContact.vue')
   },
   {
-    path: '/fourth',
-    name: 'fourth',
-    component: () => import(/* webpackChunkName: "about" */ '../views/FourthView.vue')
+    path: '/adminAbout',
+    name: 'adminAbout',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AdminAbout.vue')
   }
 ]
 

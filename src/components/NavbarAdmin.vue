@@ -1,30 +1,32 @@
 <template>
 <div>
-  <b-navbar toggleable="lg" type="dark" variant="dark">
+  <b-navbar toggleable="lg" variant="warning">
+    <router-link to="/" class="navbar-brand">Public</router-link>
+
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
 
-        <router-link to="/">
+        <router-link to="/admin">
           <b-navbar-brand>
             Posts
           </b-navbar-brand>
         </router-link>
 
-        <router-link to="/project">
+        <router-link to="/adminProject">
           <b-navbar-brand>
             Proyects
           </b-navbar-brand>
         </router-link>
 
-        <router-link to="/contact">
+        <router-link to="/adminContact">
           <b-navbar-brand>
             Contact
           </b-navbar-brand>
         </router-link>
 
-        <router-link to="/about">
+        <router-link to="/adminAbout">
           <b-navbar-brand>
             About me
           </b-navbar-brand>
@@ -41,6 +43,6 @@
 <script>
 
 export default{
-  name: 'NavBar',
+  name: 'NavbarAdmin',
 }
 </script>
