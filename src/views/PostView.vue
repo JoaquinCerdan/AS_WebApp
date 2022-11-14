@@ -1,18 +1,24 @@
 <template>
     <div class="first">
       <NavBar/>
-      <h1 align="center" class="mt-3">This is the posts page</h1>
+      <div class="m-3" align="center">
+        <h1 style="font-family: ">Posts</h1>
+      </div>
+      <PostComponent/>
+
     </div>
   </template>
   
   <script>
   // @ is an alias to /src
   import NavBar from '@/components/NavBar.vue'
+  import PostComponent from '@/components/PostComponent.vue'
   
   export default {
     name: 'PostView',
     components: {
-      NavBar
+      NavBar,
+      PostComponent
     }
   }
   </script>

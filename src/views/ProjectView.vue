@@ -1,18 +1,24 @@
 <template>
   <div class="second">
     <NavBar/>
-    <h1 align="center" class="mt-3">This is the proyects page</h1>
+    <div class="m-3" align="center">
+      <h1 style="font-family: ">Projects</h1>
+    </div>
+    <ProjectComponent/>
+    
   </div>
 </template>
   
 <script>
   // @ is an alias to /src
   import NavBar from '@/components/NavBar.vue'
+  import ProjectComponent from '@/components/ProjectComponent.vue'
   
   export default {
     name: 'ProjectView',
     components: {
-      NavBar
+      NavBar,
+      ProjectComponent
     }
   }
 </script>
