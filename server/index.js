@@ -87,7 +87,7 @@ app.get('/posts', async function(req,res) {
     var currentPage = req.query.page
     var limit = req.query.limit
     var search = req.query.search
-    res.status(200).send(await pagination('posts', currentPage, limit, 'name', search ))
+    res.status(200).send(await pagination('posts', currentPage, limit, 'title', search ))
 })
 
 //Create post

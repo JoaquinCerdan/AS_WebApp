@@ -4,6 +4,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  watch: {
+      '$route' (to) {
+        document.title = to.meta.title || 'Your Website'
+      }
+    }
+}
+</script>
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -26,3 +36,4 @@ nav {
   }
 }
 </style>
+

@@ -32,6 +32,10 @@
           </b-navbar-brand>
         </router-link>
 
+        <b-button @click="logout" variant="danger">
+          Logout
+        </b-button>
+
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -41,8 +45,15 @@
 </template>
 
 <script>
+import AuthService from '@/services/auth.services.js'
 
 export default{
   name: 'NavbarAdmin',
+  methods: {
+    logout(){
+      AuthService.logout()
+      this.$router.push("/")
+    },
+  }
 }
 </script>
