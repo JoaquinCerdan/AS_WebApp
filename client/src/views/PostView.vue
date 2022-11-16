@@ -58,6 +58,15 @@
         }
       )
     },
+    updatePaging(currentPage){
+      this.currentPage=currentPage
+      PostService.getPosts(this.search,this.currentPage).then(
+        response => {
+          this.posts = response.data.data
+          this.paging = response.data.paging
+        }
+      )
+    }
   }
 
   }

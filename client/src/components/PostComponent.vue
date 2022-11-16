@@ -1,7 +1,6 @@
 <template>
-    <div>    
-        <div class="d-flex justify-content-center">
-            <b-card-group v-for="post in posts" :key="post.id" style="display: list-item; list-style-type: none;">
+    <div>
+            <b-card-group style="display: list-item; list-style-type: none;" v-for="post in posts" :key="post.id" align="center">
                 <b-card class="m-5 b-card" align="center">
                     <b-card-title class="font-weight-bold justify-content-right">{{post.title}}</b-card-title>
                     <b-card-subtitle class="font-weight">{{post.date}}</b-card-subtitle>
@@ -15,7 +14,6 @@
                 </b-card>
 
             </b-card-group>
-        </div>
     </div> 
     
 </template>
