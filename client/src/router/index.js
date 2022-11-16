@@ -18,7 +18,7 @@ const routes = [
     name: 'Individual Post',
     component: () => import('../views/IndividualPost.vue'),
     meta: {
-      title: 'Post '
+      title: 'Individual Post '
     }
   },
   {
